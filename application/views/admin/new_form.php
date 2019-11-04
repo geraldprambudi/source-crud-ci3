@@ -13,14 +13,14 @@
             <form action="<?php base_url('admin/product/add') ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Name*</label>
-                    <input class="form-control <?= form_error('name') ? 'is_invalid' : '' ?>" type="text" name="name" placeholder="Nama Produk" />
+                    <input class="form-control <?= form_error('name') ? 'is-invalid' : '' ?>" type="text" name="name" placeholder="Nama Produk" value="<?= set_value('name'); ?>"  />
                     <div class="invalid-feedback">
                         <?= form_error('name') ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="price">Price*</label>
-                    <input class="form-control <?= form_error('price') ? 'is_invalid' : '' ?>" type="text" name="price" placeholder="Price" />
+                    <input class="form-control <?= form_error('price') ? 'is-invalid' : '' ?>" type="text" name="price" placeholder="Price" value="<?= set_value('price'); ?>" />
                     <div class="invalid-feedback">
                         <?= form_error('price') ?>
                     </div>
@@ -28,7 +28,7 @@
 
                 <div class="form-group">
                     <label for="name">Description*</label>
-                    <input class="form-control <?= form_error('description') ? 'is_invalid' : '' ?>" type="text" name="description" placeholder="deskripsi" />
+                    <input class="form-control <?= form_error('description') ? 'is-invalid' : '' ?>" type="text" name="description" placeholder="deskripsi" value="<?= set_value('description'); ?>" />
                     <div class="invalid-feedback">
                         <?= form_error('description') ?>
                     </div>

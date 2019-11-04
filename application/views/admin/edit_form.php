@@ -15,14 +15,14 @@
 
                 <div class="form-group">
                     <label for="name">Name*</label>
-                    <input class="form-control <?= form_error('name') ? 'is_invalid' : '' ?>" type="text" name="name" placeholder="Nama Produk" value="<?= $product->name ?>" />
+                    <input class="form-control <?= form_error('name') ? 'is-invalid' : '' ?>" type="text" name="name" placeholder="Nama Produk" value="<?= $product->name ?>" />
                     <div class="invalid-feedback">
                         <?= form_error('name') ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="price">Price*</label>
-                    <input class="form-control <?= form_error('price') ? 'is_invalid' : '' ?>" type="text" name="price" placeholder="Price" value="<?= $product->price ?>" />
+                    <input class="form-control <?= form_error('price') ? 'is-invalid' : '' ?>" type="text" name="price" placeholder="Price" value="<?= $product->price ?>" />
                     <div class="invalid-feedback">
                         <?= form_error('price') ?>
                     </div>
@@ -30,7 +30,7 @@
 
                 <div class="form-group">
                     <label for="name">Description*</label>
-                    <input class="form-control <?= form_error('description') ? 'is_invalid' : '' ?>" type="text" name="description" placeholder="deskripsi" value="<?= $product->description ?>" />
+                    <input class="form-control <?= form_error('description') ? 'is-invalid' : '' ?>" type="text" name="description" placeholder="deskripsi" value="<?= $product->description ?>" />
                     <div class="invalid-feedback">
                         <?= form_error('description') ?>
                     </div>

@@ -23,21 +23,23 @@ class Product extends CI_Controller
     public function add()
     {
 
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
-        $this->load->view('templates/topbar');
-        $this->load->view("admin/new_form");
-        $this->load->view('templates/footer');
-
         $product = $this->Product_model;
         $validation = $this->form_validation;
         $validation->set_rules($product->rules());
 
+
         if ($validation->run()) {
             $product->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
-            redirect('admin/product');
         }
+
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/topbar');
+        $this->load->view('admin/new_form');
+        $this->load->view('templates/footer');
+
+        
     }
 
     public function edit($id = null)
